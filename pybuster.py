@@ -86,8 +86,8 @@ def main():
         for raw_line in f_wordlist:
             line = raw_line.rstrip('\n')
             done = False
-			if line[0] = '#': # skip over # comments
-				done = True
+            if line[0] == '#':
+                done = True
             retry_count = 1
             while not done:
                 try:
