@@ -84,10 +84,10 @@ def main():
         else:
             f_outfile_opened = False
         for raw_line in f_wordlist:
+            if raw_line[0] == '#':
+                done = True
             line = raw_line.rstrip('\n')
             done = False
-            if line[0] == '#':
-                done = True
             retry_count = 1
             while not done:
                 try:
